@@ -17,10 +17,31 @@ h2 {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.modal-edit {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 .modal-content {
     background-color: #2A3E4C;
     margin: 10% auto;
-    width: 60%;
+    width: 50%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+}
+
+.edit-modal-content {
+    background-color: #2A3E4C;
+    margin: 10% auto;
+    width: 25%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     animation-name: modalopen;
     animation-duration: 0.5s;
@@ -58,6 +79,13 @@ h2 {
 }
 
 #cancel {
+    margin-top: 5px;
+    width: 50px;
+    color: #14AFF1;
+    cursor: pointer;
+}
+
+#cancel-edit {
     margin-top: 5px;
     width: 50px;
     color: #14AFF1;
@@ -118,6 +146,15 @@ label {
     border-radius: 8px;
 }
 
+.modal-edit input[type=text] {
+    background-color: #2A3E4C;
+    color: #fff;
+	font-family: 'Ubuntu', sans-serif;
+    padding: 7px 25px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
 .column {
     float: left;
     width: 50%;
@@ -127,6 +164,13 @@ label {
     content: "";
     display: table;
     clear: both;
+}
+
+.note {
+    height: 130px; 
+    width: 160px; 
+    margin-left: 120px; 
+    margin-bottom: 15px;
 }
 
 @keyframes modalopen {
