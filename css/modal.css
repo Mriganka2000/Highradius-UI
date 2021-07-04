@@ -29,6 +29,18 @@ h2 {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.modal-delete {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 .modal-content {
     background-color: #2A3E4C;
     margin: 10% auto;
@@ -47,12 +59,26 @@ h2 {
     animation-duration: 0.5s;
 }
 
+.delete-modal-content {
+    background-color: #2A3E4C;
+    margin: 10% auto;
+    width: 25%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+    animation-name: modalopen;
+    animation-duration: 0.5s;
+}
+
 .modal-header h3 {
     margin: 0;
 }
 
 .modal-header {
     padding: 15px;
+    color: #fff;
+}
+
+.modal-header-delete {
+    padding: 10px;
     color: #fff;
 }
 
@@ -71,7 +97,21 @@ h2 {
     grid-template-columns: auto auto;
 }
 
+.modal-footer-delete {
+    padding: 10px;
+    height: 35px;
+    display: grid;
+    grid-template-columns: auto;
+}
+
 .modal-footer .modal-footer-btn {
+    display: flex;
+    float: right;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.modal-footer-delete .modal-footer-btn {
     display: flex;
     float: right;
     align-items: center;
@@ -171,6 +211,13 @@ label {
     width: 160px; 
     margin-left: 120px; 
     margin-bottom: 15px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
 }
 
 @keyframes modalopen {
