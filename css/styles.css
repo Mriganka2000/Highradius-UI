@@ -5,11 +5,17 @@ body {
 .grid-container {
 	display: grid;
 	grid-template-columns: auto auto auto;
+	padding-left: 10px;
 }
 
 .second-div {
 	color: #fff;
 	font-family: 'Ubuntu', sans-serif;
+	padding-left: 10px;
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
 }
 
 .content {
@@ -169,6 +175,14 @@ td, th {
 	text-align: left; 
 }
 
+th:nth-last-child(8), td:nth-last-child(8) { 
+	text-align: center; 
+}
+
+th:nth-last-child(2), td:nth-last-child(2) { 
+	text-align: center; 
+}
+
 /* Zebra striping */
 tr:nth-of-type(even) { 
 	background: #283A46; 
@@ -192,6 +206,10 @@ h1 a {
 	margin-top: -20px;
 	text-align: center;
 	line-height: 40px;	
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
 }
 
 .content .left-slide:hover,.content .right-slide:hover{
