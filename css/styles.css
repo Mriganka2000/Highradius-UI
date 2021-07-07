@@ -130,13 +130,29 @@ body {
 }
 
 .table-wrapper{
-	overflow-y: auto;
+	overflow-y: scroll;
+	height: 528px;
 	margin-top: 60px;
+}
+
+.table-wrapper::-webkit-scrollbar {
+	width: 12px;               /* width of the entire scrollbar */
+  }
+  
+.table-wrapper::-webkit-scrollbar-track {
+	background: #273D49CC;        /* color of the tracking area */
+}
+  
+.table-wrapper::-webkit-scrollbar-thumb {
+	background-color: #1d282ecc;    /* color of the scroll thumb */
+	border-radius: 20px;       /* roundness of the scroll thumb */
+	border: 3px solid #273D49CC;  /* creates padding around scroll thumb */
 }
 
 .table-wrapper th{
     position: sticky;
     top: 0;
+	background-color: #273D49CC;
 	color: #97A1A9;
 }
 
@@ -156,11 +172,6 @@ td, th {
 /* Zebra striping */
 tr:nth-of-type(even) { 
 	background: #283A46; 
-}
-
-th { 
-	background: #273D49CC; 
-	font-weight: bold; 
 }
 
 h1 a {
